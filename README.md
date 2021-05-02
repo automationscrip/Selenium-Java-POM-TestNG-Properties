@@ -31,9 +31,8 @@ Search a keyword on google and validate if the keyword appears as the first resu
 	| POI-OOXML|5.0.0| To read and write .xlsx excel files (e.g. test data files)
 
 
-	**
-	pom.xml**
-
+	**pom.xml**
+```xml
 	<dependencies>
 
 		<dependency>
@@ -78,7 +77,7 @@ Search a keyword on google and validate if the keyword appears as the first resu
 		</dependency>
 
 	</dependencies>
-
+```
 ## How to use
 The first thing a framework should be able to handle is to launch the browser and navigate a given url.
 
@@ -142,10 +141,13 @@ The first thing a framework should be able to handle is to launch the browser an
 		
 	2. Page class methods for tests steps.
 	3. Page class constructor sets the driver and loads the respective properties file to read the locator strings.
-	    		> this.driver=driver;
-		     > this.properties= new Properties();
-		     > InputStream input= new FileInputStream("GoogleSearchPage.properties");
-		     > this.properties.load(input); 
+	```java
+		this.driver=driver;
+		this.properties= new Properties();
+		InputStream input= new FileInputStream("GoogleSearchPage.properties");
+		this.properties.load(input); 
+	```
+
 
 
  5. ### Run tests through testng.xml
